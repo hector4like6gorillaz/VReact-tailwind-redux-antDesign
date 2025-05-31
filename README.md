@@ -66,6 +66,7 @@ npm run lint / yarn lint → Analiza y corrige problemas de estilo y sintaxis.
 
 ##  📂 Estructura sugerida del proyecto
 
+```
 src/
 ├── api/                 # Servicios o configuraciones de Axios
 ├── assets/              # Imágenes y recursos estáticos
@@ -78,7 +79,7 @@ src/
 ├── styles/              # Tailwind y estilos globales
 ├── App.tsx              # Componente principal
 ├── main.tsx             # Punto de entrada
-
+```
 
 Este boilerplate no incluye librerias de testeo para la decisión a futuro a utilizar por proyecto.
 
