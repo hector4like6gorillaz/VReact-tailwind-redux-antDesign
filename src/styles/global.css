@@ -1,0 +1,83 @@
+@import "tailwindcss";
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+@font-face {
+  font-family: "MuseoSansBold";
+  src: local("MuseoSansBold"),
+    url("../assets/fonts/MuseoSans-700.ttf") format("TrueType");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "MuseoSansRegular";
+  src: local("MuseoSansRegular"),
+    url("../assets/fonts/MuseoSans_500.otf") format("OpenType");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "MuseoSansLight";
+  src: local("MuseoSansLight"),
+    url("../assets/fonts/Museo-300.otf") format("OpenType");
+  font-weight: 300;
+}
+
+* {
+  font-family: "MuseoSansRegular";
+}
+
+button {
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: green;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: blue;
+}
+th,
+td {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+}
+th {
+  color: black !important;
+}
+td {
+  color: black !important;
+}
+
+.ant-list {
+  border-top: 1px solid black;
+}
+
+.ListTitles {
+  color: black;
+}
