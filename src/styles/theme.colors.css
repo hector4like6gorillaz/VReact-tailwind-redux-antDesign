@@ -1,0 +1,13 @@
+/*prymary colors*/
+@theme {
+  --color-primary-300: #00bcd4;
+}
+/*Warning colors*/
+@theme {
+  --color-warning-red: #cc3300;
+  --color-warning-orange: #ff9966;
+  --color-warning-orange40: rgb(255, 87, 51, 0.3);
+  --color-warning-yellow: #ffcc00;
+  --color-warning-green: #99cc33;
+  --color-warning-green40: rgb(0, 255, 0, 0.3);
+}

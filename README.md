@@ -53,7 +53,7 @@ Antes de iniciar, debes crear un archivo `.env` en la raíz del proyecto con la 
 VITE_APP_API=https://pokeapi.co/api/v2/
 ```
 
-##  🧪 Scripts disponibles
+## 🧪 Scripts disponibles
 
 npm run dev / yarn dev → Inicia el servidor de desarrollo.
 
@@ -63,8 +63,7 @@ npm run preview / yarn preview → Visualiza el build generado localmente.
 
 npm run lint / yarn lint → Analiza y corrige problemas de estilo y sintaxis.
 
-
-##  📂 Estructura sugerida del proyecto
+## 📂 Estructura sugerida del proyecto
 
 ```
 src/
@@ -89,5 +88,17 @@ Este boilerplate no incluye librerias de testeo para la decisión a futuro a uti
 | Simular APIs sin backend | `msw`                                    |
 | Testeo E2E real          | `Playwright` (mejor que Cypress hoy día) |
 
+Es necesaro tener instalado el pluggin de tailwind si usas vs code asi como esta configuracion para que no salten errores de intellisense.
+(Esta en su documentación)
+
+```
+ "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.colorDecorators": true
+```
 
 Creado con ❤️ por Héctor Balan — listo para ser reutilizado y adaptado a cualquier proyecto React 2025.

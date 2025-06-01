@@ -15,8 +15,8 @@ function App() {
   } = usePokemons();
 
   return (
-    <div className="flex flex-col items-center p-[2rem]">
-      <div className="w-[50%] border-2 border-amber-300 border-warning-red flex gap-2 items-center justify-between px-[2rem]">
+    <div className="flex flex-col items-center p-[2rem]  bg-primary-300  tablet:bg-amber-200 desktop:bg-warning-green ultrawide:bg-warning-orange">
+      <div className="w-[50%] border-2  border-amber-300 flex gap-2 items-center justify-between px-[2rem]">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="w-[4rem] h-[4rem]" alt="Vite logo" />
         </a>
