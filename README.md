@@ -1,11 +1,14 @@
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="100" alt="React logo" />
+  <img src="https://vitejs.dev/logo.svg" width="60" alt="Vite logo" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="60" alt="React logo" />
+  <img src="https://redux.js.org/img/redux.svg" width="60" alt="Redux logo" />
+  <img src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype.128b6e7a.svg" width="100" alt="Tailwind logo" />
 </p>
 
-<h1 align="center">Boilerplate React + vite + Redux + Tailwind</h1>
+<h1 align="center">Boilerplate React + Vite + Redux + Tailwind</h1>
 
 <p align="center">
-  ⚡ Plantilla base moderna para iniciar proyectos con React 19 + vite, Redux Toolkit, Tailwind CSS, React Query y más.
+  ⚡ Plantilla base moderna para iniciar proyectos con React 19 + Vite, Redux Toolkit, Tailwind CSS, React Query, almacenamiento seguro con LocalForage + CryptoJS y más.
 </p>
 
 ---
@@ -14,19 +17,20 @@
 
 Este boilerplate viene configurado con las siguientes librerías y herramientas:
 
-| Tecnología              | Descripción                                                          |
-| ----------------------- | -------------------------------------------------------------------- |
-| **React 19**            | Librería principal para la construcción de interfaces modernas.      |
-| **Vite**                | Empaquetador ultra rápido para desarrollo y producción.              |
-| **TypeScript**          | Tipado estático para desarrollo más seguro y escalable.              |
-| **ESLint**              | Linter para mantener código limpio y consistente.                    |
-| **Redux Toolkit**       | Manejador de estado global con configuración simplificada.           |
-| **Tailwind CSS**        | Utilidades CSS para estilos rápidos y personalizados.                |
-| **React Query**         | Gestión de fetching de datos, cache y sincronización con el backend. |
-| **React Router DOM v7** | Enrutador oficial para SPAs en React.                                |
-| **React Toastify**      | Notificaciones y toasts fáciles de usar y personalizar.              |
-| **Axios**               | Cliente HTTP para consumir APIs.                                     |
-| **RxJS**                | Librería para programación reactiva basada en streams.               |
+| Tecnología                  | Descripción                                                          |
+| --------------------------- | -------------------------------------------------------------------- |
+| **React 19**                | Librería principal para la construcción de interfaces modernas.      |
+| **Vite**                    | Empaquetador ultra rápido para desarrollo y producción.              |
+| **TypeScript**              | Tipado estático para desarrollo más seguro y escalable.              |
+| **ESLint**                  | Linter para mantener código limpio y consistente.                    |
+| **Redux Toolkit**           | Manejador de estado global con configuración simplificada.           |
+| **Tailwind CSS**            | Utilidades CSS para estilos rápidos y personalizados.                |
+| **React Query**             | Gestión de fetching de datos, cache y sincronización con el backend. |
+| **React Router DOM v7**     | Enrutador oficial para SPAs en React.                                |
+| **React Toastify**          | Notificaciones y toasts fáciles de usar y personalizar.              |
+| **Axios**                   | Cliente HTTP para consumir APIs.                                     |
+| **RxJS**                    | Librería para programación reactiva basada en streams.               |
+| **localforage + crypto-js** | Almacenamiento local seguro con cifrado AES personalizado.           |
 
 ---
 
@@ -41,6 +45,7 @@ Esta plantilla está preparada para:
 - Realizar llamadas HTTP seguras con Axios.
 - Usar programación reactiva avanzada con RxJS (ideal para flujos complejos).
 - Manejadores de rutas usando React Router DOM versión 7.
+- Almacenar de forma local y segura con cifrado AES personalizado.
 - Desplegar fácilmente con Vite.
 
 ---
@@ -51,6 +56,7 @@ Antes de iniciar, debes crear un archivo `.env` en la raíz del proyecto con la 
 
 ```env
 VITE_APP_API=https://pokeapi.co/api/v2/
+VITE_APP_LOCAL_SECRET=cambia-la-clave-de-encriptacion
 ```
 
 ## 🧪 Scripts disponibles
@@ -72,11 +78,11 @@ src/
 ├── components/          # Componentes reutilizables
 ├── features/            # Slices de Redux organizados por dominio
 ├── hooks/               # Custom hooks
+├── HOCs/                # Custom high order components
 ├── pages/               # Páginas principales de la app
 ├── routes/              # Definición de rutas
 ├── store/               # Configuración de Redux
 ├── styles/              # Tailwind y estilos globales
-├── App.tsx              # Componente principal
 ├── main.tsx             # Punto de entrada
 ```
 

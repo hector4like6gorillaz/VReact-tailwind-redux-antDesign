@@ -1,8 +1,8 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 
-import usePokemons from "./hooks/usePokemons";
-import { capitalFirstLetter } from "./utils/words-utilities";
+import usePokemons from './hooks/usePokemons'
+import { capitalFirstLetter } from './utils/words-utilities'
 
 function App() {
   const {
@@ -12,7 +12,7 @@ function App() {
     dataPokelista,
     handleClickButton,
     handleGetPokeList,
-  } = usePokemons();
+  } = usePokemons()
 
   return (
     <div className="flex flex-col items-center p-[2rem]  bg-primary-300  tablet:bg-amber-200 desktop:bg-warning-green ultrawide:bg-warning-orange">
@@ -35,13 +35,13 @@ function App() {
         )}
       </div>
       <h1 className="text-3xl mt-2">
-        Vite + React, {capitalFirstLetter(data?.name ?? "")}{" "}
+        Vite + React, {capitalFirstLetter(data?.name ?? '')}{' '}
       </h1>
       <div className="flex p-7 gap-2 items-center justify-center">
-        <button onClick={handleClickButton} style={{ all: "revert" }}>
+        <button onClick={handleClickButton} style={{ all: 'revert' }}>
           count is {count},{value}
         </button>
-        <button onClick={handleGetPokeList} style={{ all: "revert" }}>
+        <button onClick={handleGetPokeList} style={{ all: 'revert' }}>
           obtener pokelista kanto
         </button>
       </div>
@@ -53,7 +53,7 @@ function App() {
                 <div key={index}>
                   <p>{capitalFirstLetter(item.name)} </p>
                 </div>
-              );
+              )
             }
           )}
         </div>
@@ -62,7 +62,7 @@ function App() {
         Click on the Vite, React and pokemon logos to learn more
       </p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NormalRoute from "./NormalRoute";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NormalRoute from './NormalRoute'
 
-import App from "src/App";
-import PrivateRoute from "./PrivateRoute";
+import App from 'src/App'
+import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
   return (
@@ -19,7 +19,7 @@ const Router = () => {
         <Route path="*" element={<div> 404 </div>} />
       </Routes>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default Router;
+export default Router
