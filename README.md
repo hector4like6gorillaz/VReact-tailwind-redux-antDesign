@@ -2,7 +2,7 @@
   <img src="https://vitejs.dev/logo.svg" width="60" alt="Vite logo" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="60" alt="React logo" />
   <img src="https://redux.js.org/img/redux.svg" width="60" alt="Redux logo" />
-  <img src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype.128b6e7a.svg" width="100" alt="Tailwind logo" />
+  <img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg" width="70" alt="Tailwind logo" />
 </p>
 
 <h1 align="center">Boilerplate React + Vite + Redux + Tailwind</h1>
