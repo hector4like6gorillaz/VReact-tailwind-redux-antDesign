@@ -3,9 +3,10 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="60" alt="React logo" />
   <img src="https://redux.js.org/img/redux.svg" width="60" alt="Redux logo" />
   <img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg" width="70" alt="Tailwind logo" />
+  <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" width="60" alt="Ant logo" />
 </p>
 
-<h1 align="center">Boilerplate React + Vite + Redux + Tailwind</h1>
+<h1 align="center">Boilerplate React + Vite + Redux + Tailwind + Ant-design</h1>
 
 <p align="center">
   ⚡ Plantilla base moderna para iniciar proyectos con React 19 + Vite, Redux Toolkit, Tailwind CSS, React Query, almacenamiento seguro con LocalForage + CryptoJS y más.
@@ -25,12 +26,14 @@ Este boilerplate viene configurado con las siguientes librerías y herramientas:
 | **ESLint**                  | Linter para mantener código limpio y consistente.                    |
 | **Redux Toolkit**           | Manejador de estado global con configuración simplificada.           |
 | **Tailwind CSS**            | Utilidades CSS para estilos rápidos y personalizados.                |
+| **Ant Design**              | Librería de componentes UI elegantes y profesionales.                |
 | **React Query**             | Gestión de fetching de datos, cache y sincronización con el backend. |
 | **React Router DOM v7**     | Enrutador oficial para SPAs en React.                                |
 | **React Toastify**          | Notificaciones y toasts fáciles de usar y personalizar.              |
 | **Axios**                   | Cliente HTTP para consumir APIs.                                     |
 | **RxJS**                    | Librería para programación reactiva basada en streams.               |
 | **localforage + crypto-js** | Almacenamiento local seguro con cifrado AES personalizado.           |
+| **react-helmet-async**      | Control dinámico del título y metadatos de cada ruta.                |
 
 ---
 
@@ -46,6 +49,8 @@ Esta plantilla está preparada para:
 - Usar programación reactiva avanzada con RxJS (ideal para flujos complejos).
 - Manejadores de rutas usando React Router DOM versión 7.
 - Almacenar de forma local y segura con cifrado AES personalizado.
+- Utilizar componentes UI elegantes con Ant Design (botones, menús, inputs, tablas, etc).
+- Controlar dinámicamente los metadatos (título, descripción, Open Graph) con `react-helmet-async`.
 - Desplegar fácilmente con Vite.
 
 ---
