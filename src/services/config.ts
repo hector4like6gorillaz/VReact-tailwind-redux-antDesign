@@ -1,43 +1,50 @@
-import axios from "axios";
-
-const TOKEN_NAME = import.meta.env.TOKKEN_NAME;
+import axios from 'axios'
+import { secureGetItem } from './localForage/collapse.service'
+import { localForageKeys } from './localForage/keys'
+import { mapRoutes } from 'src/router/mapPath'
 
 const environmentIsDev =
-  window.location.href.includes("develop") ||
-  window.location.href.includes("localhost");
+  window.location.href.includes('develop') ||
+  window.location.href.includes('localhost')
 
 let baseURL: any = environmentIsDev
   ? import.meta.env.VITE_APP_API
-  : import.meta.env.VITE_APP_API_PROD;
+  : import.meta.env.VITE_APP_API_PROD
 
-const getTokenData = (): string | null => {
-  if (TOKEN_NAME) return localStorage.getItem(TOKEN_NAME);
-  return null;
-};
+const getSecureToken = async (): Promise<string | null> => {
+  try {
+    const token = await secureGetItem(localForageKeys.token) // usa el nombre que tú uses
+    return token ?? null
+  } catch {
+    return null
+  }
+}
 
-const getAuthHeaders = (
-  token: string | null,
-  contentType = "application/json"
-): Record<string, string> => ({
-  "Content-Type": `${contentType}; charset=utf-8`,
-  ...(token ? { Authorization: `Bearer ${token}` } : {}),
-});
-const createAxiosInstance = (
+const createAxiosInstance = async (
   auth: boolean,
-  contentType = "application/json"
+  contentType = 'application/json'
 ) => {
-  const token = getTokenData();
-  if (auth && !token) throw new Error("UNAUTHENTICATED");
+  const token = auth ? await getSecureToken() : null
+
+  if (auth && !token) window.location.href = mapRoutes.login
 
   return axios.create({
     baseURL,
-    headers: getAuthHeaders(auth ? token : null, contentType),
-  });
-};
+    headers: {
+      'Content-Type': `${contentType}; charset=utf-8`,
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  })
+}
 
-const SERVICE = () => createAxiosInstance(false);
-const AUTHSERVICE = () => createAxiosInstance(true);
-const AUTHSERVICE_FORMDATA = () =>
-  createAxiosInstance(true, "multipart/form-data");
+const SERVICE = async () => await createAxiosInstance(false)
 
-export { SERVICE, AUTHSERVICE, AUTHSERVICE_FORMDATA };
+const AUTHSERVICE = async () => await createAxiosInstance(true)
+
+const AUTHSERVICE_FORMDATA = async () =>
+  await createAxiosInstance(true, 'multipart/form-data')
+
+const SERVICE_FORMDATA = async () =>
+  await createAxiosInstance(false, 'multipart/form-data')
+
+export { SERVICE, AUTHSERVICE, AUTHSERVICE_FORMDATA, SERVICE_FORMDATA }

@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { timer, Subscription } from 'rxjs'
 
-const useCommonFunctions = () => {
+const useCommonFunctions = (props?: {
+  redirect: boolean
+  path: string
+  delay?: number
+}) => {
+  const { delay = 3000 } = props ?? {}
+
   const navigate = useNavigate()
   const [isMovile, setisMovile] = useState(false)
 
@@ -27,8 +34,16 @@ const useCommonFunctions = () => {
   useEffect(() => {
     if (screenSize.width < 599) setisMovile(true)
     else setisMovile(false)
-    return () => {}
   }, [screenSize])
+
+  useEffect(() => {
+    if (!props?.redirect) return
+    const sub: Subscription = timer(delay).subscribe(() => {
+      navigate(props.path)
+    })
+
+    return () => sub.unsubscribe()
+  }, [navigate, props?.path])
 
   return {
     //local functions

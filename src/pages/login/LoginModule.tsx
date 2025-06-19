@@ -4,7 +4,7 @@ const LoginModule = () => {
   return (
     <div className="w-full  ">
       <HelmetCustom titleTab="Login" />
-      soy un contenido
+      soy un login
     </div>
   )
 }

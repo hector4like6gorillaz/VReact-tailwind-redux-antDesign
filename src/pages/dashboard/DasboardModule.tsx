@@ -4,9 +4,7 @@ const DasboardModule = () => {
   return (
     <div>
       <HelmetCustom titleTab="Dashboard" />
-      <div className='h-[500rem]'>
-sss
-      </div>
+      <div className="h-[500rem]">Dashboard</div>
     </div>
   )
 }

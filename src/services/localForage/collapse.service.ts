@@ -28,3 +28,11 @@ export const secureGetItem = async (key: string): Promise<any | null> => {
     return null
   }
 }
+
+export const secureRemoveItem = async (key: string): Promise<void> => {
+  try {
+    await localforage.removeItem(key)
+  } catch (error) {
+    console.error(`Error al eliminar la clave ${key}`, error)
+  }
+}

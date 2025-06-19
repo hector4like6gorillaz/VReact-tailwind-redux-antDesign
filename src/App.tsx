@@ -26,11 +26,13 @@ function App() {
 
         {data?.sprites.animated !== null && (
           <a href="https://pokeapi.co/" target="_blank">
-            <img
-              src={data?.sprites.front_default}
-              className="w-[10rem] h-[10rem] "
-              alt="React logo"
-            />
+            {data?.sprites.front_default && (
+              <img
+                src={data?.sprites.front_default}
+                className="w-[10rem] h-[10rem] "
+                alt="React logo"
+              />
+            )}
           </a>
         )}
       </div>
