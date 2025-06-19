@@ -20,23 +20,23 @@
 }
 /*prymary colors ligh theme*/
 @theme {
-  --color-primary: #2f80ed;
-  --color-primary-100: #244c8a;
-  --color-primary-200: #1d3e70;
-  --color-primary-300: #162f56;
-  --color-primary-400: #101f3c;
-  --color-primary-500: #0a1021;
+  --color-primary-d: #2f80ed;
+  --color-primary-d-100: #244c8a;
+  --color-primary-d-200: #1d3e70;
+  --color-primary-d-300: #162f56;
+  --color-primary-d-400: #101f3c;
+  --color-primary-d-500: #0a1021;
 
-  --color-secondary: #56ccf2;
-  --color-secondary-100: #2faed0;
-  --color-secondary-200: #268ba7;
-  --color-secondary-300: #1c677e;
-  --color-secondary-400: #134355;
-  --color-secondary-500: #0a1f2c;
+  --color-secondary-d: #56ccf2;
+  --color-secondary-d-100: #2faed0;
+  --color-secondary-d-200: #268ba7;
+  --color-secondary-d-300: #1c677e;
+  --color-secondary-d-400: #134355;
+  --color-secondary-d-500: #0a1f2c;
 
-  --color-background: #121212;
-  --color-surface: #1e1e1e;
-  --color-text: #ffffff;
+  --color-background-d: #121212;
+  --color-surface-d: #1e1e1e;
+  --color-text-d: #ffffff;
 }
 /*font colors*/
 @theme {
