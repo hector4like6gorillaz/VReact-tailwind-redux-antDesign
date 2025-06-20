@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import { JSX } from 'react'
+
+import type { JSX } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 
 function PrivateRoute(): JSX.Element {

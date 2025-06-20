@@ -1,6 +1,7 @@
 import { GiDropletSplash } from 'react-icons/gi'
 import { Spin } from 'antd'
 
+
 const SplashModule = () => {
   return (
     <div className="fixed w-full h-full bg-gradient-primary z-50 flex flex-col items-center justify-center">

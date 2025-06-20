@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { mapRoutes } from 'src/router/mapPath'
-import {
-  useSplashQueryFail,
-  useSplashQuerySuccess,
-} from 'src/services/querys/splash.query'
+import { useSplashQuerySuccess } from 'src/services/querys/splash.query'
 import useCommonFunctions from './useCommonFunctions'
 
 const useSplash = () => {
@@ -18,7 +15,7 @@ const useSplash = () => {
     location.pathname
   )
 
-  const { data, isError, isSuccess, isFetching } = useSplashQuerySuccess()
+  const { isError, isSuccess, isFetching } = useSplashQuerySuccess()
   //aqui la data la puedes usar para guardarla en una variable global como datos del usuario
   //incluyendo el rol en caso de ser necesario
   //const { data, isError, isSuccess, isFetching } = useSplashQueryFail()

@@ -4,7 +4,6 @@ import useCommonFunctions from 'src/hooks/useCommonFunctions'
 import TopStatusBar from 'src/components/TopStatusBar'
 
 import { Outlet } from 'react-router-dom'
-import SplashModule from 'src/pages/splash/SplashModule'
 
 const MainLayout = ({
   showNavBar = true,
